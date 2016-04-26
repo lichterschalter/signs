@@ -1,0 +1,146 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Signs</title>
+  <script src="js/jquery-2.2.0.min.js"></script>
+  <style>
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    p {
+      font-family: Georgia, Sans-Serif;
+      font-size: 24;
+      position: absolute;
+      top: 420;
+      left: 15;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="sign1" src="img/sign1.png">
+  <img id="sign2" src="img/sign2.png">
+  <img id="sign3" src="img/sign3.png">
+  <img id="sign4" src="img/sign4.png">
+  <img id="sign5" src="img/sign5.png">
+  <img id="sign6" src="img/sign6.png">
+  <img id="sign7" src="img/sign7.png">
+  <img id="sign8" src="img/sign8.png">
+  <p>Use the keys [ a,s,d,f,g,h,j,k ] to change the glyph. <br> Hit [ enter ] to clear the screen.</p>
+
+  <script>
+   $(document).ready(function(){
+     //$("#sign1").hide();
+     $("#sign2").hide();
+     $("#sign3").hide();
+     $("#sign4").hide();
+     $("#sign5").hide();
+     $("#sign6").hide();
+     $("#sign7").hide();
+     $("#sign8").hide();
+
+     $(document).keypress(function(e) {
+       console.log(e.which);
+       switch( e.which ){
+         case 97:
+           $("#sign1").toggle();
+           break;
+         case 115:
+           $("#sign2").toggle();
+           break;
+         case 100:
+           $("#sign3").toggle();
+           break;
+         case 102:
+           $("#sign4").toggle();
+           break;
+         case 103:
+           $("#sign5").toggle();
+           break;
+         case 104:
+           $("#sign6").toggle();
+           break;
+         case 106:
+           $("#sign7").toggle();
+           break;
+         case 107:
+           $("#sign8").toggle();
+           break;
+         case 13:
+           $("#sign1").hide();
+           $("#sign2").hide();
+           $("#sign3").hide();
+           $("#sign4").hide();
+           $("#sign5").hide();
+           $("#sign6").hide();
+           $("#sign7").hide();
+           $("#sign8").hide();
+       }
+     });
+
+
+     /*$("img").click(function(){
+       function updateSign() {
+         var choose = Math.floor( ( Math.random() * 8 ) + 0)
+         switch( choose ){
+           case 0:
+             $("#sign1").hide();
+             break;
+           case 1:
+             $("#sign1").show();
+             break;
+           case 2:
+             $("#sign2").hide();
+             break;
+           case 3:
+             $("#sign2").show();
+             break;
+           case 4:
+             $("#sign3").hide();
+             break;
+           case 5:
+             $("#sign3").show();
+             break;
+           case 6:
+             $("#sign4").hide();
+             break;
+           case 7:
+             $("#sign4").show();
+             break;
+           case 8:
+             $("#sign5").hide();
+             break;
+           case 9:
+             $("#sign5").show();
+             break;
+           case 10:
+             $("#sign6").hide();
+             break;
+           case 11:
+             $("#sign6").show();
+             break;
+           case 12:
+             $("#sign7").hide();
+             break;
+           case 13:
+             $("#sign7").show();
+             break;
+           case 14:
+             $("#sign8").hide();
+             break;
+           case 15:
+             $("#sign8").show();
+             break;
+         }
+       }
+       setInterval(updateSign, 500);*/
+    // }); //end img click
+   }); //end document ready
+  </script>
+</body>
+
+</html>
